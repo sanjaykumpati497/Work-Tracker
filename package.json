@@ -1,0 +1,12 @@
+{
+  "name": "nest-up-project",
+  "version": "1.0.0",
+  "description": "Simple Nest Up backend server and static frontend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.4"
+  }
+}

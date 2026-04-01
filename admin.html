@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Admin Dashboard</h2>
+<div id="userInfo" class="user-info"></div>
+<button onclick="logout()">Logout</button>
+
+<div id="dashboardSummary" class="dashboard-grid"></div>
+
+<h3>Member Workload</h3>
+<div id="memberWorkload" class="dashboard-list"></div>
+
+<h3>Bottlenecks</h3>
+<div id="bottlenecks" class="dashboard-list"></div>
+
+<h3>Process Flow Diagram</h3>
+<div id="flowDiagram" class="diagram-container"></div>
+
+<h3>Create Task</h3>
+
+<input type="text" id="title" placeholder="Task Title">
+<select id="priority">
+<option>Low</option>
+<option>Medium</option>
+<option>High</option>
+<option>Critical</option>
+</select>
+
+<select id="member">
+<option>member1</option>
+<option>member2</option>
+</select>
+
+<select id="dependencyMode">
+  <option value="full">Full dependency</option>
+  <option value="partial">Partial dependency</option>
+</select>
+
+<select id="dependencies" multiple size="4"></select>
+<input type="number" id="threshold" placeholder="Threshold (default 100)">
+
+<button onclick="createTask()">Create Task</button>
+
+<h3>Tasks</h3>
+
+<div id="taskList"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
