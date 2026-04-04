@@ -121,7 +121,8 @@ app.get('/', (req, res) => {
 
 app.post('/api/login', (req, res) => {
   const { username, password } = req.body;
-  const user = users.find(u => u.username === username && u.password === password);
+  const normalizedUsername = String(username || '').trim().toLowerCase();
+  const user = users.find(u => u.username.toLowerCase() === normalizedUsername && u.password === password);
   if (!user) {
     return res.status(401).json({ message: 'Invalid credentials' });
   }
